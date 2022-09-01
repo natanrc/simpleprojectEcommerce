@@ -1,0 +1,5 @@
+logo: //div[@class="login_logo"]
+txtInput_Username: //input[@class="input_error form_input"]
+txtInput_Password: //input[@id="password"]
+button_login: //input[@id="login-button"]
+homeproduct_text: //span[@class="title"]

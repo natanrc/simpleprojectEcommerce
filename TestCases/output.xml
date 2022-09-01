@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220901 01:39:39.415" rpa="false" schemaversion="3">
+<suite id="s1" name="Logintest" source="D:\autotesting\projectEcommerce\testcases\logintest.robot">
+<test id="s1-t1" name="Verify a valid login" line="13">
+<kw name="Open browser windows" library="loginKeywords">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220901 01:39:39.757" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20220901 01:39:39.758" level="INFO">Firefox driver log is always forced to to: D:\autotesting\projectEcommerce\testcases\geckodriver-4.log</msg>
+<status status="PASS" starttime="20220901 01:39:39.756" endtime="20220901 01:39:49.267"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220901 01:39:49.267" endtime="20220901 01:39:49.555"/>
+</kw>
+<status status="PASS" starttime="20220901 01:39:39.755" endtime="20220901 01:39:49.555"/>
+</kw>
+<kw name="Enter User Name" library="loginKeywords">
+<arg>${user}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${logo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220901 01:39:49.556" endtime="20220901 01:39:49.591"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtInput_Username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220901 01:39:49.592" level="INFO">Typing text 'standard_user' into text field '//input[@class="input_error form_input"]'.</msg>
+<status status="PASS" starttime="20220901 01:39:49.591" endtime="20220901 01:39:49.675"/>
+</kw>
+<status status="PASS" starttime="20220901 01:39:49.556" endtime="20220901 01:39:49.675"/>
+</kw>
+<kw name="Enter valid password" library="loginKeywords">
+<arg>${pwd}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtInput_Password}</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220901 01:39:49.677" level="INFO">Typing text 'secret_sauce' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20220901 01:39:49.676" endtime="20220901 01:39:49.749"/>
+</kw>
+<status status="PASS" starttime="20220901 01:39:49.676" endtime="20220901 01:39:49.749"/>
+</kw>
+<kw name="Click button login" library="loginKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220901 01:39:49.751" level="INFO">Clicking element '//input[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20220901 01:39:49.751" endtime="20220901 01:39:52.163"/>
+</kw>
+<status status="PASS" starttime="20220901 01:39:49.750" endtime="20220901 01:39:52.164"/>
+</kw>
+<kw name="user should be on product dasboard" library="loginKeywords">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${homeproduct_text}</arg>
+<arg>PRODUCTS</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220901 01:39:52.194" level="INFO">Element '//span[@class="title"]' contains text 'PRODUCTS'.</msg>
+<status status="PASS" starttime="20220901 01:39:52.164" endtime="20220901 01:39:52.194"/>
+</kw>
+<status status="PASS" starttime="20220901 01:39:52.164" endtime="20220901 01:39:52.195"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220901 01:39:57.197" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220901 01:39:52.195" endtime="20220901 01:39:57.197"/>
+</kw>
+<kw name="Close browser windows" library="loginKeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220901 01:39:57.198" endtime="20220901 01:40:00.029"/>
+</kw>
+<status status="PASS" starttime="20220901 01:39:57.198" endtime="20220901 01:40:00.029"/>
+</kw>
+<doc>Login with valid user name and password</doc>
+<tag>Login</tag>
+<status status="PASS" starttime="20220901 01:39:39.754" endtime="20220901 01:40:00.030"/>
+</test>
+<status status="PASS" starttime="20220901 01:39:39.417" endtime="20220901 01:40:00.031"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Login</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Logintest">Logintest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
